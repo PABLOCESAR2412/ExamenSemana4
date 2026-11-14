@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ptorresExamen.Views.vLogin"
+             Title="Login"
+             BackgroundColor="White">
+
+    <!-- Espacio (Spacing) 10 · Margen (Padding) 20 -->
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Logo de la empresa en la parte superior (imagen local) -->
+        <Image Source="logo_gym.png"
+               HeightRequest="140"
+               Aspect="AspectFit"
+               HorizontalOptions="Center" />
+
+        <!-- Título: MORADO, tamaño 26, centrado y en negrita (estilo global) -->
+        <Label Text="GYM ISRAEL"
+               Style="{StaticResource TituloLoginStyle}" />
+
+        <!-- GRID 3 filas × 2 columnas: usuario, contraseña y fila del botón -->
+        <Grid RowDefinitions="Auto,Auto,Auto"
+              ColumnDefinitions="Auto,*"
+              RowSpacing="10"
+              ColumnSpacing="10"
+              Margin="0,10,0,0">
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="Usuario"
+                   Style="{StaticResource EtiquetaStyle}" />
+            <Entry Grid.Row="0" Grid.Column="1"
+                   x:Name="txtUsuario"
+                   Placeholder="Ingresa el usuario"
+                   Style="{StaticResource CajaStyle}" />
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   Text="Contraseña"
+                   Style="{StaticResource EtiquetaStyle}" />
+            <Entry Grid.Row="1" Grid.Column="1"
+                   x:Name="txtContrasena"
+                   Placeholder="Ingresa la contraseña"
+                   IsPassword="True"
+                   Style="{StaticResource CajaStyle}" />
+
+            <Button Grid.Row="2" Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    x:Name="btnIniciar"
+                    Text="Iniciar sesión"
+                    Style="{StaticResource BotonStyle}"
+                    Clicked="btnIniciar_Clicked" />
+        </Grid>
+
+        <Button x:Name="btnAcercaDe"
+                Text="Acerca de"
+                Style="{StaticResource BotonStyle}"
+                Clicked="btnAcercaDe_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

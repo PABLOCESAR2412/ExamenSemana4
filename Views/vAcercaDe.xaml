@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ptorresExamen.Views.vAcercaDe"
+             Title="Acerca de"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Foto local del estudiante -->
+        <Image Source="avatar.png"
+               HeightRequest="150"
+               Aspect="AspectFit"
+               HorizontalOptions="Center" />
+
+        <!-- Información del estudiante (estilos globales) -->
+        <Label Text="Pablo Torres"
+               Style="{StaticResource TituloRegistroStyle}" />
+
+        <Label Text="Carrera: Informática"
+               Style="{StaticResource EtiquetaStyle}"
+               HorizontalOptions="Center" />
+
+        <Label Text="Paralelo: A"
+               Style="{StaticResource EtiquetaStyle}"
+               HorizontalOptions="Center" />
+
+        <Label Text="Universidad Tecnológica Israel"
+               Style="{StaticResource UsuarioStyle}"
+               HorizontalOptions="Center" />
+
+        <Label Text="Evaluación 1 – Desarrollo para dispositivos Móviles"
+               Style="{StaticResource UsuarioStyle}"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

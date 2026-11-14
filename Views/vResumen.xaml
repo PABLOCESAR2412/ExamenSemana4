@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ptorresExamen.Views.vResumen"
+             Title="Resumen"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <!-- Usuario Conectado -->
+        <Label x:Name="lblUsuario"
+               Text="Usuario conectado: ..."
+               Style="{StaticResource UsuarioStyle}" />
+
+        <!-- Título RESUMEN (estilo global) -->
+        <Label Text="RESUMEN"
+               Style="{StaticResource TituloResumenStyle}" />
+
+        <!-- GRID 9 Filas × 2 Columnas -->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              ColumnDefinitions="*,*"
+              RowSpacing="8"
+              ColumnSpacing="10"
+              Margin="0,10,0,0">
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="lblNombre" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Apellido" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="lblApellido" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="Edad" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="lblEdad" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Fecha de inicio" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="lblFecha" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Plan" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="4" Grid.Column="1" x:Name="lblPlan" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Casillero" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="5" Grid.Column="1" x:Name="lblCasillero" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="6" Grid.Column="1" x:Name="lblMonto" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual" Style="{StaticResource EtiquetaStyle}" />
+            <Label Grid.Row="7" Grid.Column="1" x:Name="lblPagoMensual" Style="{StaticResource UsuarioStyle}" />
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Pago Total" Style="{StaticResource EtiquetaStyle}" FontAttributes="Bold" />
+            <Label Grid.Row="8" Grid.Column="1" x:Name="lblPagoTotal" Style="{StaticResource UsuarioStyle}" FontAttributes="Bold" TextColor="#0074D5" />
+        </Grid>
+
+        <!-- Botones -->
+        <Button x:Name="btnExportar"
+                Text="Exportar datos"
+                Style="{StaticResource BotonStyle}"
+                Clicked="btnExportar_Clicked" />
+
+        <Button x:Name="btnNuevo"
+                Text="Nuevo registro"
+                Style="{StaticResource BotonStyle}"
+                Clicked="btnNuevo_Clicked" />
+
+        <Button x:Name="btnCerrarSesion"
+                Text="Cerrar sesión"
+                Style="{StaticResource BotonStyle}"
+                Clicked="btnCerrarSesion_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
